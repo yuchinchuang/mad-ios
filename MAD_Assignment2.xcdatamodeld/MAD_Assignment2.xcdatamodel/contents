@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1510" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Exam" representedClassName="Exam" syncable="YES" codeGenerationType="class">
+        <attribute name="examDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="examLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="exams" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="courseStudy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="exams" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exam" inverseName="student" inverseEntity="Exam" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Exam" positionX="-54" positionY="45" width="128" height="105"/>
+        <element name="Student" positionX="-63" positionY="-18" width="128" height="165"/>
+    </elements>
+</model>
